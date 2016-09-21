@@ -1,8 +1,10 @@
 import sys
+from urllib import urlencode
 
 import ckan.model as model
 import ckan.logic as logic
 import ckan.lib.maintain as maintain
+import ckan.lib.plugins
 import helpers as hierarchy_helpers
 from ckan.common import c, _, g, request, OrderedDict
 import ckan.lib.helpers as h
@@ -10,6 +12,7 @@ import ckan.authz as authz
 import ckan.lib.search as search
 
 import ckan.controllers.organization as organization
+lookup_group_controller = ckan.lib.plugins.lookup_group_controller
 
 
 import logging
